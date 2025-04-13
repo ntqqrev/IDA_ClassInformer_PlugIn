@@ -95,7 +95,7 @@ Upon completion, a list window displays found vftables with details:
 
 Class names are labeled as “class” by default unless prefixed with “struct” to indicate a structure type.
 
-![view](C:\Projects\IDA_Pro_Work\IDA_ClassInformer_PlugIn\res\view.png)
+![view](/res/view.png)
 
 ------
 
