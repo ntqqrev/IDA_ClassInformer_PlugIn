@@ -1,0 +1,25 @@
+
+/* Make the table easier to read */
+QHeaderView
+{
+	font-family: Noto Sans,Consolas;
+	font-weight: 100;
+	font-size: 12px;
+}
+QTableView
+{
+	font-family: Noto Sans,Consolas;
+	font-weight: 100;
+	font-size: 14px;
+}
+
+/* Tweak the status/line bar */
+QStatusBar
+{
+	font-family: Noto Sans,Consolas;
+	font-weight: 300;
+	font-size: 12px;
+
+	color: #FAFAFA;
+	background-color: #9575CD;
+}

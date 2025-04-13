@@ -1,0 +1,13 @@
+<!DOCTYPE RCC><RCC version="1.0">
+	<qresource prefix="">
+		<file>res/banner.png</file>
+		<file>res/icon.png</file>
+		<file>res/completed.ogg</file>
+		<file>res/checkbox-checked.png</file>
+		<file>res/progress-style.qss</file>
+		<file>res/style.qss</file>
+		<file>res/view-style.qss</file>
+		<file>res/cpp_rtti_text.png</file>
+		<file>res/drax-building_up_and_down.xm</file>
+	</qresource>
+</RCC>

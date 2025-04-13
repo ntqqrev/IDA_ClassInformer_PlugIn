@@ -1,0 +1,562 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="SPECIAL_EDITION|x64">
+      <Configuration>SPECIAL_EDITION</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>ClassInformer</ProjectName>
+    <Keyword>QtVS_v304</Keyword>
+    <ProjectGuid>{DEADBEEF-CAFE-F00D-FEED-C0FFEEC0FFEE}</ProjectGuid>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <SpectreMitigation>false</SpectreMitigation>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <SpectreMitigation>false</SpectreMitigation>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Import Project="$(QtMsBuild)\qt_defaults.props" Condition="Exists('$(QtMsBuild)\qt_defaults.props')" />
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtDeploy>false</QtDeploy>
+    <QtDeployEnv>VCINSTALLDIR=$(VCInstallDir)</QtDeployEnv>
+    <QtDeployAddToolsDirToPath>true</QtDeployAddToolsDirToPath>
+    <QtDeployDir>@(_-->'%(OutDir)')</QtDeployDir>
+    <QtDeployDebugRelease>false</QtDeployDebugRelease>
+    <QtDeployPdb>false</QtDeployPdb>
+    <QtDeployForce>false</QtDeployForce>
+    <QtDeployNoPatchQt>false</QtDeployNoPatchQt>
+    <QtDeployNoPlugins>false</QtDeployNoPlugins>
+    <QtDeployNoLibraries>false</QtDeployNoLibraries>
+    <QtDeployQmlDir>$(ProjectDir)</QtDeployQmlDir>
+    <QtDeployNoQuickImport>false</QtDeployNoQuickImport>
+    <QtDeployNoTranslations>false</QtDeployNoTranslations>
+    <QtDeployNoSystemD3dCompiler>false</QtDeployNoSystemD3dCompiler>
+    <QtDeployNoVirtualKeyboard>false</QtDeployNoVirtualKeyboard>
+    <QtDeployCompilerRuntime>false</QtDeployCompilerRuntime>
+    <QtDeployWebkit2>false</QtDeployWebkit2>
+    <QtDeployAngle>false</QtDeployAngle>
+    <QtDeployNoOpenglSw>false</QtDeployNoOpenglSw>
+    <QtDeployVsContent>false</QtDeployVsContent>
+    <QtDeployFiles>$(TargetPath)</QtDeployFiles>
+    <QtDeployCopyFiles>false</QtDeployCopyFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="QtSettings">
+    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtDeploy>false</QtDeploy>
+    <QtDeployEnv>VCINSTALLDIR=$(VCInstallDir)</QtDeployEnv>
+    <QtDeployAddToolsDirToPath>true</QtDeployAddToolsDirToPath>
+    <QtDeployDir>@(_-->'%(OutDir)')</QtDeployDir>
+    <QtDeployDebugRelease>false</QtDeployDebugRelease>
+    <QtDeployPdb>false</QtDeployPdb>
+    <QtDeployForce>false</QtDeployForce>
+    <QtDeployNoPatchQt>false</QtDeployNoPatchQt>
+    <QtDeployNoPlugins>false</QtDeployNoPlugins>
+    <QtDeployNoLibraries>false</QtDeployNoLibraries>
+    <QtDeployQmlDir>$(ProjectDir)</QtDeployQmlDir>
+    <QtDeployNoQuickImport>false</QtDeployNoQuickImport>
+    <QtDeployNoTranslations>false</QtDeployNoTranslations>
+    <QtDeployNoSystemD3dCompiler>false</QtDeployNoSystemD3dCompiler>
+    <QtDeployNoVirtualKeyboard>false</QtDeployNoVirtualKeyboard>
+    <QtDeployCompilerRuntime>false</QtDeployCompilerRuntime>
+    <QtDeployWebkit2>false</QtDeployWebkit2>
+    <QtDeployAngle>false</QtDeployAngle>
+    <QtDeployNoOpenglSw>false</QtDeployNoOpenglSw>
+    <QtDeployVsContent>false</QtDeployVsContent>
+    <QtDeployFiles>$(TargetPath)</QtDeployFiles>
+    <QtDeployCopyFiles>false</QtDeployCopyFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'" Label="QtSettings">
+    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtModules>core;gui;widgets</QtModules>
+    <QtDeploy>false</QtDeploy>
+    <QtDeployEnv>VCINSTALLDIR=$(VCInstallDir)</QtDeployEnv>
+    <QtDeployAddToolsDirToPath>true</QtDeployAddToolsDirToPath>
+    <QtDeployDir>@(_-->'%(OutDir)')</QtDeployDir>
+    <QtDeployDebugRelease>false</QtDeployDebugRelease>
+    <QtDeployPdb>false</QtDeployPdb>
+    <QtDeployForce>false</QtDeployForce>
+    <QtDeployNoPatchQt>false</QtDeployNoPatchQt>
+    <QtDeployNoPlugins>false</QtDeployNoPlugins>
+    <QtDeployNoLibraries>false</QtDeployNoLibraries>
+    <QtDeployQmlDir>$(ProjectDir)</QtDeployQmlDir>
+    <QtDeployNoQuickImport>false</QtDeployNoQuickImport>
+    <QtDeployNoTranslations>false</QtDeployNoTranslations>
+    <QtDeployNoSystemD3dCompiler>false</QtDeployNoSystemD3dCompiler>
+    <QtDeployNoVirtualKeyboard>false</QtDeployNoVirtualKeyboard>
+    <QtDeployCompilerRuntime>false</QtDeployCompilerRuntime>
+    <QtDeployWebkit2>false</QtDeployWebkit2>
+    <QtDeployAngle>false</QtDeployAngle>
+    <QtDeployNoOpenglSw>false</QtDeployNoOpenglSw>
+    <QtDeployVsContent>false</QtDeployVsContent>
+    <QtDeployFiles>$(TargetPath)</QtDeployFiles>
+    <QtDeployCopyFiles>false</QtDeployCopyFiles>
+  </PropertyGroup>
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <GenerateManifest>false</GenerateManifest>
+    <TargetName>IDA_ClassInformer</TargetName>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\build\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <GenerateManifest>false</GenerateManifest>
+    <TargetName>IDA_ClassInformer</TargetName>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\build\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">
+    <GenerateManifest>false</GenerateManifest>
+    <TargetName>IDA_ClassInformer</TargetName>
+    <IntDir>$(SolutionDir)$(Platform)\$(Configuration)\build\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\Debug/IDA_RTTI_Informer_PlugIn.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(_IDADIR)\idasdk\include;$(IDASUPPORT)\Utility;$(IDASUPPORT)\IDA_WaitEx\include;$(IDASUPPORT)\IDA_OggPlayer\include;$(IDASUPPORT)\IDA_SegmentSelect\include;LocalData\libxmp-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__EA64__;__X64__;_DEBUG;_WINDOWS;_USRDLL;__NT__;__IDP__;__VC__;QT_NO_DEBUG;QT_NAMESPACE=QT;_CRT_SECURE_NO_WARNINGS;MATERIAL_DESIGN_STYLE;LIBXMP_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <Optimization>Disabled</Optimization>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ida.lib;Winmm.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(_IDADIR)\idasdk\lib\x64_win_vc_64;$(_IDADIR)\idasdk\lib\x64_win_qt;$(IDASUPPORT)\IDA_WaitEx\lib;$(IDASUPPORT)\IDA_SegmentSelect\lib;$(IDASUPPORT)\IDA_OggPlayer\lib;LocalData\libxmp-master\LIB;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>
+      </ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>
+      </ImportLibrary>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(SolutionDir)Debug\IDA_RTTI_Informer_PlugIn.bsc</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>copy "$(OutDir)$(TargetFileName)" "$(_IDADIR)\plugins"</Command>
+    </PostBuildEvent>
+    <QtMoc>
+      <QtMocDir>$(QtIntDir)moc\</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+      <ExecutionDescription>moc %(Identity)</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <OverrideClCompile>false</OverrideClCompile>
+      <ParallelProcess>true</ParallelProcess>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>%(Filename)</InitFuncName>
+      <Compression>default</Compression>
+      <NoCompression>true</NoCompression>
+      <QtRccDir>$(QtIntDir)rcc\</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+      <ExecutionDescription>rcc %(Identity)</ExecutionDescription>
+      <TwoPass>false</TwoPass>
+      <DynamicSource>output</DynamicSource>
+      <ParallelProcess>true</ParallelProcess>
+      <QmlCacheGenerate>false</QmlCacheGenerate>
+      <QmlCacheGenMessage>Qt Quick Compiler: compiling %&lt;Identity&gt; ahead of time</QmlCacheGenMessage>
+      <QmlCacheOutputFile>$(ProjectDir)GeneratedFiles\%&lt;Filename&gt;_%&lt;Suffix&gt;.cpp</QmlCacheOutputFile>
+      <QmlCacheFilterMessage>Qt Quick Compiler: filtering %(Identity)</QmlCacheFilterMessage>
+      <QmlCacheFilteredFile>$(ProjectDir)GeneratedFiles\%(Filename)_qmlcache.qrc</QmlCacheFilteredFile>
+      <QmlCacheFilteredOutputFile>$(ProjectDir)GeneratedFiles\qrc_%(Filename)_qmlcache.cpp</QmlCacheFilteredOutputFile>
+      <QmlCacheFilteredInitFuncName>%(Filename)_qmlcache</QmlCacheFilteredInitFuncName>
+      <QmlCacheLoaderMessage>Qt Quick Compiler: generating cache loader</QmlCacheLoaderMessage>
+      <QmlCacheLoaderFile>$(ProjectDir)GeneratedFiles\qmlcache_loader.cpp</QmlCacheLoaderFile>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>uic %(Identity)</ExecutionDescription>
+      <QtUicDir>$(QtIntDir)uic\</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+      <ParallelProcess>true</ParallelProcess>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\Debug/IDA_RTTI_Informer_PlugIn.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <AdditionalIncludeDirectories>$(_IDADIR)\idasdk\include;$(IDASUPPORT)\Utility;$(IDASUPPORT)\IDA_WaitEx\include;$(IDASUPPORT)\IDA_OggPlayer\include;$(IDASUPPORT)\IDA_SegmentSelect\include;LocalData\libxmp-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__EA64__;__X64__;NDEBUG;_WINDOWS;_USRDLL;__NT__;__IDP__;__VC__;QT_NO_DEBUG;QT_NAMESPACE=QT;_CRT_SECURE_NO_WARNINGS;MATERIAL_DESIGN_STYLE;LIBXMP_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <StringPooling>true</StringPooling>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ida.lib;Winmm.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(_IDADIR)\idasdk\lib\x64_win_vc_64;$(_IDADIR)\idasdk\lib\x64_win_qt;$(IDASUPPORT)\IDA_WaitEx\lib;$(IDASUPPORT)\IDA_SegmentSelect\lib;$(IDASUPPORT)\IDA_OggPlayer\lib;LocalData\libxmp-master\LIB;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>
+      </ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>
+      </ImportLibrary>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(SolutionDir)Debug\IDA_RTTI_Informer_PlugIn.bsc</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>copy "$(OutDir)$(TargetFileName)" "$(_IDADIR)\plugins"</Command>
+    </PostBuildEvent>
+    <QtMoc>
+      <QtMocDir>$(QtIntDir)moc\</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+      <ExecutionDescription>moc %(Identity)</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <OverrideClCompile>false</OverrideClCompile>
+      <ParallelProcess>true</ParallelProcess>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>%(Filename)</InitFuncName>
+      <Compression>default</Compression>
+      <NoCompression>true</NoCompression>
+      <QtRccDir>$(QtIntDir)rcc\</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+      <ExecutionDescription>rcc %(Identity)</ExecutionDescription>
+      <TwoPass>false</TwoPass>
+      <DynamicSource>output</DynamicSource>
+      <ParallelProcess>true</ParallelProcess>
+      <QmlCacheGenerate>false</QmlCacheGenerate>
+      <QmlCacheGenMessage>Qt Quick Compiler: compiling %&lt;Identity&gt; ahead of time</QmlCacheGenMessage>
+      <QmlCacheOutputFile>$(ProjectDir)GeneratedFiles\%&lt;Filename&gt;_%&lt;Suffix&gt;.cpp</QmlCacheOutputFile>
+      <QmlCacheFilterMessage>Qt Quick Compiler: filtering %(Identity)</QmlCacheFilterMessage>
+      <QmlCacheFilteredFile>$(ProjectDir)GeneratedFiles\%(Filename)_qmlcache.qrc</QmlCacheFilteredFile>
+      <QmlCacheFilteredOutputFile>$(ProjectDir)GeneratedFiles\qrc_%(Filename)_qmlcache.cpp</QmlCacheFilteredOutputFile>
+      <QmlCacheFilteredInitFuncName>%(Filename)_qmlcache</QmlCacheFilteredInitFuncName>
+      <QmlCacheLoaderMessage>Qt Quick Compiler: generating cache loader</QmlCacheLoaderMessage>
+      <QmlCacheLoaderFile>$(ProjectDir)GeneratedFiles\qmlcache_loader.cpp</QmlCacheLoaderFile>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>uic %(Identity)</ExecutionDescription>
+      <QtUicDir>$(QtIntDir)uic\</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+      <ParallelProcess>true</ParallelProcess>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TypeLibraryName>.\Debug/IDA_RTTI_Informer_PlugIn.tlb</TypeLibraryName>
+      <HeaderFileName>
+      </HeaderFileName>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <AdditionalIncludeDirectories>$(_IDADIR)\idasdk\include;$(IDASUPPORT)\Utility;$(IDASUPPORT)\IDA_WaitEx\include;$(IDASUPPORT)\IDA_OggPlayer\include;$(IDASUPPORT)\IDA_SegmentSelect\include;LocalData\libxmp-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>__EA64__;__X64__;NDEBUG;_WINDOWS;_USRDLL;__NT__;__IDP__;__VC__;QT_NO_DEBUG;QT_NAMESPACE=QT;_CRT_SECURE_NO_WARNINGS;MATERIAL_DESIGN_STYLE;LIBXMP_STATIC;SPECIAL_EDITION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ExceptionHandling>Async</ExceptionHandling>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <StringPooling>true</StringPooling>
+      <ControlFlowGuard>false</ControlFlowGuard>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>ida.lib;Winmm.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(_IDADIR)\idasdk\lib\x64_win_vc_64;$(_IDADIR)\idasdk\lib\x64_win_qt;$(IDASUPPORT)\IDA_WaitEx\lib;$(IDASUPPORT)\IDA_SegmentSelect\lib;$(IDASUPPORT)\IDA_OggPlayer\lib;LocalData\libxmp-master\LIB;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ProgramDatabaseFile>
+      </ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <ImportLibrary>
+      </ImportLibrary>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>$(SolutionDir)Debug\IDA_RTTI_Informer_PlugIn.bsc</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Command>copy "$(OutDir)$(TargetFileName)" "$(_IDADIR)\plugins"</Command>
+    </PostBuildEvent>
+    <QtMoc>
+      <QtMocDir>$(QtIntDir)moc\</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+      <ExecutionDescription>moc %(Identity)</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <OverrideClCompile>false</OverrideClCompile>
+      <ParallelProcess>true</ParallelProcess>
+    </QtMoc>
+    <QtRcc>
+      <InitFuncName>%(Filename)</InitFuncName>
+      <Compression>default</Compression>
+      <NoCompression>true</NoCompression>
+      <QtRccDir>$(QtIntDir)rcc\</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+      <ExecutionDescription>rcc %(Identity)</ExecutionDescription>
+      <TwoPass>false</TwoPass>
+      <DynamicSource>output</DynamicSource>
+      <ParallelProcess>true</ParallelProcess>
+      <QmlCacheGenerate>false</QmlCacheGenerate>
+      <QmlCacheGenMessage>Qt Quick Compiler: compiling %&lt;Identity&gt; ahead of time</QmlCacheGenMessage>
+      <QmlCacheOutputFile>$(ProjectDir)GeneratedFiles\%&lt;Filename&gt;_%&lt;Suffix&gt;.cpp</QmlCacheOutputFile>
+      <QmlCacheFilterMessage>Qt Quick Compiler: filtering %(Identity)</QmlCacheFilterMessage>
+      <QmlCacheFilteredFile>$(ProjectDir)GeneratedFiles\%(Filename)_qmlcache.qrc</QmlCacheFilteredFile>
+      <QmlCacheFilteredOutputFile>$(ProjectDir)GeneratedFiles\qrc_%(Filename)_qmlcache.cpp</QmlCacheFilteredOutputFile>
+      <QmlCacheFilteredInitFuncName>%(Filename)_qmlcache</QmlCacheFilteredInitFuncName>
+      <QmlCacheLoaderMessage>Qt Quick Compiler: generating cache loader</QmlCacheLoaderMessage>
+      <QmlCacheLoaderFile>$(ProjectDir)GeneratedFiles\qmlcache_loader.cpp</QmlCacheLoaderFile>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>uic %(Identity)</ExecutionDescription>
+      <QtUicDir>$(QtIntDir)uic\</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+      <ParallelProcess>true</ParallelProcess>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <CustomBuild Include="RTTI.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="StdAfx.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="undname.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+    <CustomBuild Include="Vftable.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">
+      </Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Performing Custom Build Tools</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Performing Custom Build Tools</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">Performing Custom Build Tools</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">
+      </Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </AdditionalInputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'">
+      </AdditionalInputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\IDA_Support\Utility\Utility.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="MainDialog.cpp" />
+    <ClCompile Include="RTTI.cpp" />
+    <ClCompile Include="Vftable.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="dialog.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\IDA_Support\IDA_OggPlayer\IdaOgg.h" />
+    <ClInclude Include="..\IDA_Support\IDA_SegmentSelect\include\SegSelect.h" />
+    <ClInclude Include="..\IDA_Support\Utility\Utility.h" />
+    <QtMoc Include="AnimBannerWidget.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </QtMoc>
+    <ClInclude Include="LocalData\libxmp-master\include\xmp.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="Main.h" />
+    <QtMoc Include="MainDialog.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="ClassInformerRes.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ai solutions.txt" />
+    <Text Include="changes.txt" />
+    <Text Include="LocalData\Doc\classes.txt" />
+    <Text Include="LocalData\Doc\List Window Child Widgets.txt" />
+    <Text Include="LocalData\Doc\Notes.txt" />
+    <Text Include="LocalData\Doc\Qt Build and MOC stuff.txt" />
+    <Text Include="LocalData\Doc\ScratchPad.txt" />
+    <Text Include="LocalData\Doc\Temp.txt" />
+    <Text Include="LocalData\Doc\Update TODO.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\banner.png" />
+    <Image Include="res\checkbox-checked.png" />
+    <Image Include="res\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LocalData\adding animted banner.md" />
+    <None Include="res\completed.ogg" />
+    <None Include="res\progress-style.qss" />
+    <None Include="res\style.qss" />
+    <None Include="res\view-style.qss" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(QtMsBuild)\qt.targets" Condition="Exists('$(QtMsBuild)\qt.targets')" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
