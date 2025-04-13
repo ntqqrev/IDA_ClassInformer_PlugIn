@@ -1,6 +1,6 @@
 ## Class Informer
 
-**Kevin Weatherman aka "Sirmabus"
+**Kevin Weatherman aka "Sirmabus"**
 **Repo [Github](https://github.com/kweatherman/IDA_ClassInformer_PlugIn), former: [SourceForge](https://sourceforge.net/projects/classinformer/)**  
 
 Class Informer is a plug-in for [Hex-Rays IDA Pro](https://hex-rays.com/ida-pro/), designed to scan Microsoft Visual C++ (MSVC) binaries for virtual function tables (vftables) using C++ [Run-Time Type Identification (RTTI)](http://en.wikipedia.org/wiki/RTTI) data. It enhances reverse engineering by naming, labeling, and commenting vftables, defining associated data structures, and providing a browsable list window for class objects.
@@ -9,7 +9,7 @@ Note: This plug-in is tailored for MSVC-compiled binaries. Results may be unpred
 
 Based on Igor Skochinsky’s article, [Reversing Microsoft Visual C++](http://www.openrce.org/articles/full_view/23), and updated insights from [Recon 2012](http://www.hexblog.com/wp-content/uploads/2012/06/Recon-2012-Skochinsky-Compiler-Internals.pdf).
 
--------------------------------------------
+------
 
 #### Update & Status
 
@@ -73,9 +73,10 @@ Launch Class Informer via:
 
 ###### Dialog Options
 
+![dialog](/res/dialog.png)
+
 - **Place structures**: Enable to define RTTI data structures; disable to clean up data elements with comments only.
 - **Process static initializers & terminators**: Enable to process constructor/destructor tables; disable to skip.
-- **Overwrite anterior comments**: Enable to replace existing comments above vftables; disable to preserve them.
 - **Audio on completion**: Enable for a sound when scanning completes; disable for silence.
 
 ###### Output
@@ -93,6 +94,8 @@ Upon completion, a list window displays found vftables with details:
 - **Styling**: Non-primary classes in multiple inheritance are grayed out.
 
 Class names are labeled as “class” by default unless prefixed with “struct” to indicate a structure type.
+
+![view](C:\Projects\IDA_Pro_Work\IDA_ClassInformer_PlugIn\res\view.png)
 
 ------
 
