@@ -528,8 +528,6 @@
     <QtRcc Include="ClassInformerRes.qrc" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="ai solutions.txt" />
-    <Text Include="changes.txt" />
     <Text Include="LocalData\Doc\classes.txt" />
     <Text Include="LocalData\Doc\List Window Child Widgets.txt" />
     <Text Include="LocalData\Doc\Notes.txt" />
@@ -544,7 +542,6 @@
     <Image Include="res\icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="LocalData\adding animted banner.md" />
     <None Include="res\completed.ogg" />
     <None Include="res\progress-style.qss" />
     <None Include="res\style.qss" />

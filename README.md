@@ -57,7 +57,7 @@ Long overdue for an update. In particular for major IDA Pro version 9.
 
    ```text
    ; Sirmabus "Class Informer" plug-in
-   Class-Informer IDA_ClassInformer_PlugIn.plw Alt-2 0
+   Class-Informer IDA_ClassInformer_PlugIn Alt-2 0
    ```
 
 3. Refer to IDA Pro documentation for additional plug-in setup details.
@@ -73,7 +73,7 @@ Launch Class Informer via:
 
 ###### Dialog Options
 
-![dialog](/res/dialog.png)
+![dialog](res/dialog.png)
 
 - **Place structures**: Enable to define RTTI data structures; disable to clean up data elements with comments only.
 - **Process static initializers & terminators**: Enable to process constructor/destructor tables; disable to skip.
@@ -95,7 +95,7 @@ Upon completion, a list window displays found vftables with details:
 
 Class names are labeled as “class” by default unless prefixed with “struct” to indicate a structure type.
 
-![view](/res/view.png)
+![view](res/view.png)
 
 ------
 

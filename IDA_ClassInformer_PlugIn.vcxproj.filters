@@ -85,12 +85,6 @@
     <Text Include="LocalData\Doc\Update TODO.txt">
       <Filter>Doc</Filter>
     </Text>
-    <Text Include="ai solutions.txt">
-      <Filter>Doc</Filter>
-    </Text>
-    <Text Include="changes.txt">
-      <Filter>Doc</Filter>
-    </Text>
   </ItemGroup>
   <ItemGroup>
     <Image Include="res\banner.png">
@@ -115,9 +109,6 @@
     </None>
     <None Include="res\view-style.qss">
       <Filter>Resource Files</Filter>
-    </None>
-    <None Include="LocalData\adding animted banner.md">
-      <Filter>Doc</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
