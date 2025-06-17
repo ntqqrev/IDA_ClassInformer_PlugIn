@@ -150,7 +150,7 @@ static BOOL getTableEntry(TBLENTRY &entry, UINT32 index){ return(netNode->supval
 static BOOL setTableEntry(TBLENTRY &entry, UINT32 index){ return(netNode->supset(index, &entry, (offsetof(TBLENTRY, str) + entry.strSize), NN_TABLE_TAG)); }
 
 // Add an entry to the vftable list
-void addTableEntry(UINT32 flags, ea_t vft, int methodCount, LPCTSTR format, ...)
+void addTableEntry(UINT32 flags, ea_t vft, int methodCount, LPCSTR format, ...)
 {
 	TBLENTRY e;
 	e.vft = vft;
@@ -754,7 +754,7 @@ static void processRegisterInitterm(ea_t start, ea_t end, ea_t call)
     }
 }
 
-static UINT32 doInittermTable(func_t *func, ea_t start, ea_t end, LPCTSTR name)
+static UINT32 doInittermTable(func_t *func, ea_t start, ea_t end, LPCSTR name)
 {
     UINT32 found = FALSE;
 
@@ -815,7 +815,7 @@ static UINT32 doInittermTable(func_t *func, ea_t start, ea_t end, LPCTSTR name)
 
 // Process _initterm function
 // Returns TRUE if at least one found
-static BOOL processInitterm(ea_t address, LPCTSTR name)
+static BOOL processInitterm(ea_t address, LPCSTR name)
 {
     msg("%llX process initterm: \"%s\" \n", address, name);
     UINT32 count = 0;
