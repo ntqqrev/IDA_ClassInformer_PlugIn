@@ -13,7 +13,7 @@ Based on Igor Skochinsky’s article, [Reversing Microsoft Visual C++](http://ww
 
 #### Update & Status
 
-Long overdue for an update. In particular for major IDA Pro version 9.
+Long overdue for an update. In particular for major IDA Pro version 9 (now 9.2).
 
 * Has been for a while since , most certainly with version 9, that IDA's own built-in *rtti.dll* plugin does an excellent job of finding and labeling RTTI data.
   In some testing with my latest version, Class Informer typically only finds a very small percent, if any at all, of RTTI placements that IDA doesn't find.

@@ -44,7 +44,7 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <Import Project="$(QtMsBuild)\qt_defaults.props" Condition="Exists('$(QtMsBuild)\qt_defaults.props')" />
   <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtInstall>msvc2022_64</QtInstall>
     <QtModules>core;gui;widgets</QtModules>
     <QtDeploy>false</QtDeploy>
     <QtDeployEnv>VCINSTALLDIR=$(VCInstallDir)</QtDeployEnv>
@@ -70,7 +70,7 @@
     <QtDeployCopyFiles>false</QtDeployCopyFiles>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="QtSettings">
-    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtInstall>msvc2022_64</QtInstall>
     <QtModules>core;gui;widgets</QtModules>
     <QtDeploy>false</QtDeploy>
     <QtDeployEnv>VCINSTALLDIR=$(VCInstallDir)</QtDeployEnv>
@@ -96,7 +96,7 @@
     <QtDeployCopyFiles>false</QtDeployCopyFiles>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='SPECIAL_EDITION|x64'" Label="QtSettings">
-    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtInstall>msvc2022_64</QtInstall>
     <QtModules>core;gui;widgets</QtModules>
     <QtDeploy>false</QtDeploy>
     <QtDeployEnv>VCINSTALLDIR=$(VCInstallDir)</QtDeployEnv>
@@ -166,7 +166,7 @@
       </HeaderFileName>
     </Midl>
     <ClCompile>
-      <AdditionalIncludeDirectories>$(_IDADIR)\idasdk\include;$(IDASUPPORT)\Utility;$(IDASUPPORT)\IDA_WaitEx\include;$(IDASUPPORT)\IDA_OggPlayer\include;$(IDASUPPORT)\IDA_SegmentSelect\include;LocalData\libxmp-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(_IDADIR)\idasdk\src\include;$(IDASUPPORT)\Utility;$(IDASUPPORT)\IDA_WaitEx\include;$(IDASUPPORT)\IDA_OggPlayer\include;$(IDASUPPORT)\IDA_SegmentSelect\include;LocalData\libxmp-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>__EA64__;__X64__;_DEBUG;_WINDOWS;_USRDLL;__NT__;__IDP__;__VC__;QT_NO_DEBUG;QT_NAMESPACE=QT;_CRT_SECURE_NO_WARNINGS;MATERIAL_DESIGN_STYLE;LIBXMP_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
@@ -183,8 +183,8 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>ida.lib;Winmm.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(_IDADIR)\idasdk\lib\x64_win_vc_64;$(_IDADIR)\idasdk\lib\x64_win_qt;$(IDASUPPORT)\IDA_WaitEx\lib;$(IDASUPPORT)\IDA_SegmentSelect\lib;$(IDASUPPORT)\IDA_OggPlayer\lib;LocalData\libxmp-master\LIB;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ida.lib;Winmm.lib;Qt6Core.lib;Qt6Gui.lib;Qt6Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(_IDADIR)\idasdk\src\lib\x64_win_vc_64;$(_IDADIR)\idasdk\src\lib\x64_win_qt;$(IDASUPPORT)\IDA_WaitEx\lib;$(IDASUPPORT)\IDA_SegmentSelect\lib;$(IDASUPPORT)\IDA_OggPlayer\lib;LocalData\libxmp-master\LIB;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>
       </ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
@@ -246,7 +246,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Full</Optimization>
-      <AdditionalIncludeDirectories>$(_IDADIR)\idasdk\include;$(IDASUPPORT)\Utility;$(IDASUPPORT)\IDA_WaitEx\include;$(IDASUPPORT)\IDA_OggPlayer\include;$(IDASUPPORT)\IDA_SegmentSelect\include;LocalData\libxmp-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(_IDADIR)\idasdk\src\include;$(IDASUPPORT)\Utility;$(IDASUPPORT)\IDA_WaitEx\include;$(IDASUPPORT)\IDA_OggPlayer\include;$(IDASUPPORT)\IDA_SegmentSelect\include;LocalData\libxmp-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>__EA64__;__X64__;NDEBUG;_WINDOWS;_USRDLL;__NT__;__IDP__;__VC__;QT_NO_DEBUG;QT_NAMESPACE=QT;_CRT_SECURE_NO_WARNINGS;MATERIAL_DESIGN_STYLE;LIBXMP_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -265,8 +265,8 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>ida.lib;Winmm.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(_IDADIR)\idasdk\lib\x64_win_vc_64;$(_IDADIR)\idasdk\lib\x64_win_qt;$(IDASUPPORT)\IDA_WaitEx\lib;$(IDASUPPORT)\IDA_SegmentSelect\lib;$(IDASUPPORT)\IDA_OggPlayer\lib;LocalData\libxmp-master\LIB;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ida.lib;Winmm.lib;Qt6Core.lib;Qt6Gui.lib;Qt6Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(_IDADIR)\idasdk\src\lib\x64_win_vc_64;$(_IDADIR)\idasdk\src\lib\x64_win_qt;$(IDASUPPORT)\IDA_WaitEx\lib;$(IDASUPPORT)\IDA_SegmentSelect\lib;$(IDASUPPORT)\IDA_OggPlayer\lib;LocalData\libxmp-master\LIB;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>
       </ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
@@ -331,7 +331,7 @@
     </Midl>
     <ClCompile>
       <Optimization>Full</Optimization>
-      <AdditionalIncludeDirectories>$(_IDADIR)\idasdk\include;$(IDASUPPORT)\Utility;$(IDASUPPORT)\IDA_WaitEx\include;$(IDASUPPORT)\IDA_OggPlayer\include;$(IDASUPPORT)\IDA_SegmentSelect\include;LocalData\libxmp-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(_IDADIR)\idasdk\src\include;$(IDASUPPORT)\Utility;$(IDASUPPORT)\IDA_WaitEx\include;$(IDASUPPORT)\IDA_OggPlayer\include;$(IDASUPPORT)\IDA_SegmentSelect\include;LocalData\libxmp-master\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>__EA64__;__X64__;NDEBUG;_WINDOWS;_USRDLL;__NT__;__IDP__;__VC__;QT_NO_DEBUG;QT_NAMESPACE=QT;_CRT_SECURE_NO_WARNINGS;MATERIAL_DESIGN_STYLE;LIBXMP_STATIC;SPECIAL_EDITION;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <WarningLevel>Level3</WarningLevel>
       <SuppressStartupBanner>true</SuppressStartupBanner>
@@ -350,8 +350,8 @@
       <Culture>0x0409</Culture>
     </ResourceCompile>
     <Link>
-      <AdditionalDependencies>ida.lib;Winmm.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>$(_IDADIR)\idasdk\lib\x64_win_vc_64;$(_IDADIR)\idasdk\lib\x64_win_qt;$(IDASUPPORT)\IDA_WaitEx\lib;$(IDASUPPORT)\IDA_SegmentSelect\lib;$(IDASUPPORT)\IDA_OggPlayer\lib;LocalData\libxmp-master\LIB;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>ida.lib;Winmm.lib;Qt6Core.lib;Qt6Gui.lib;Qt6Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(_IDADIR)\idasdk\src\lib\x64_win_vc_64;$(_IDADIR)\idasdk\src\lib\x64_win_qt;$(IDASUPPORT)\IDA_WaitEx\lib;$(IDASUPPORT)\IDA_SegmentSelect\lib;$(IDASUPPORT)\IDA_OggPlayer\lib;LocalData\libxmp-master\LIB;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <ProgramDatabaseFile>
       </ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
