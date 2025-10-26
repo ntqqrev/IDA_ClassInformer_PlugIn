@@ -1,0 +1,22 @@
+{
+  "name": "class-informer-cmake",
+  "version": "0.0.0",
+  "dependencies": [
+    {
+      "name": "libxmp"
+    },
+    {
+      "name": "stb"
+    },
+    {
+      "name": "qtbase",
+      "version>=": "6.8.2",
+      "default-features": false,
+      "features": [ "gui", "widgets" ],
+      "host": true
+    }
+  ],
+  "overrides": [
+    { "name": "qtbase", "version": "6.8.2" }
+  ]
+}

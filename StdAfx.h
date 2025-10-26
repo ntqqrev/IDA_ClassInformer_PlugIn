@@ -43,11 +43,6 @@
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QScrollBar>
 #include <QResource>
-// IDA SDK Qt libs
-#pragma comment(lib, "Qt6Core.lib")
-#pragma comment(lib, "Qt6Gui.lib")
-#pragma comment(lib, "Qt6Widgets.lib")
-
 #include "Utility.h"
 #include "undname.h"
 

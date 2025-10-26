@@ -1,4 +1,3 @@
-
 // Class Informer
 #include "stdafx.h"
 #include "Main.h"
@@ -422,7 +421,7 @@ bool idaapi run(size_t arg)
             if (cmp != COMP_MS)
             {
                 msg("** IDA reports target compiler: \"%s\"\n", get_compiler_name(cmp));
-                int iResult = ask_buttons(NULL, NULL, NULL, 0, "TITLE Class Informer\nHIDECANCEL\nIDA reports this IDB's compiler as: \"%s\" \n\nThis plug-in only understands MS Visual C++ targets.\nRunning it on other targets (like Borland© compiled, etc.) will have unpredicted results.   \n\nDo you want to continue anyhow?", get_compiler_name(cmp));
+                int iResult = ask_buttons(NULL, NULL, NULL, 0, "TITLE Class Informer\nHIDECANCEL\nIDA reports this IDB's compiler as: \"%s\" \n\nThis plug-in only understands MS Visual C++ targets.\nRunning it on other targets (like Borlandï¿½ compiled, etc.) will have unpredicted results.   \n\nDo you want to continue anyhow?", get_compiler_name(cmp));
                 if (iResult != 1)
                 {
                     msg("- Aborted -\n\n");
